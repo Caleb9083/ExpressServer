@@ -43,7 +43,7 @@ app.get('/', function(req, res) {
 app.get('/products', function(req, res) {
     res.json(products)
 })
-cms
+
 app.get('/customers', function(req, res) {
     res.json(customers)
 })
