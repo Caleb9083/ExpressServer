@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+/*
 const products = [{
         id: 1,
         name: "Iphone 13 pro max",
@@ -35,23 +36,29 @@ const customers = [{
         gender: "male"
     }
 ]
-
+*/
 app.get('/', function(req, res) {
     res.json({ message: "How are you" })
 })
 
+
 app.get('/products', function(req, res) {
-    res.json(products)
+    //res.json(products)
 })
 
 app.get('/customers', function(req, res) {
-    res.json(customers)
+    //res.json(customers)
 })
 
+app.post('/products', function(req, res) {
+    console.log(req.body)
+})
+/*
 app.get('/customers/:customerID', function(req, res) {
     const { customerID } = req.params;
     console.log(`The customer ID is ${customerID}`)
     res.json(customerID - 1)
 })
+*/
 
 app.listen(3000)
